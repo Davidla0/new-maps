@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+    <form onsubmit="save(event)">
+        <label>
+            <p>E-mail
+                <input type="email" placeholder="Enter your email here" name="email" />
+            </p>
+        </label>
+        <label>
+            <p> Age
+                <input type="range" min="18" max="120" value="100" class="filter-range" oninput="" name="age"
+                    onchange="onSetAgeValue(this.value)" />
+                <span class="age-res"></span>
+            </p>
+        </label>
+        <h4>- colors -</h4>
+        <label for="">
+            <p>Set background-color
+                <input type="color" name="backgroundColor" value="#add8e6" />
+            </p>
+        </label>
+        <label for="">
+            <p>Set text-color
+                <input type="color" name="textColor" value="#4a3939" />
+            </p>
+        </label>
+        <label for="">
+            <p>Birth Date
+                <input type="date" name="date" />
+            </p>
+        </label>
+        <label for="">
+            <p>Birth time
+                <input type="time" name="time" />
+            </p>
+        </label>
+
+        <button>Set</button>
+
+
+    </form>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="js/services/utils.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/place.service.js"></script>
+    <script src="js/services/user.service.js"></script>
+    <script src="js/main.controller.js"></script>
+</body>
+
+</html>
